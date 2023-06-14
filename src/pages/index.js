@@ -4,7 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import * as styles from "../assets/css/index.module.css"
+import WordpressPostList from "../components/wordpressPostList"
 
 const links = [
   {
@@ -115,6 +116,9 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
+
+    <h4>List of news</h4>
+    <WordpressPostList />
   </Layout>
 )
 

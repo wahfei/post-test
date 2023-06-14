@@ -39,5 +39,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // Specify the URL of the WordPress source
+        // baseUrl: ``,
+        url: `https://wpblogtest-v1.jcent.website/graphql`,
+        // url: `https://kduklang.mydemobb.com/graphql`,
+        protocol: `http`,
+        // Indicates if a site is hosted on WordPress.com
+        hostingWPCOM: false,
+        // Specify which URL structures to fetch
+        includedRoutes: ["**/posts", "**/tags", "**/categories"],
+      },
+    },
   ],
 }
